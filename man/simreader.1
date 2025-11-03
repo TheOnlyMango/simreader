@@ -1,0 +1,98 @@
+.TH SIMREADER 1 "2025-01-01" "simreader 1.0.0" "User Commands"
+
+.SH NAME
+simreader \- Unified SIM/USIM card reader tool
+
+.SH SYNOPSIS
+.B simreader
+[\fIOPTIONS\fR]
+
+.SH DESCRIPTION
+simreader is a comprehensive tool for reading and analyzing SIM and USIM cards. It supports both traditional 2G SIM cards and modern 3G/4G/5G USIM cards, providing detailed analysis of card structure and contents.
+
+.SH OPTIONS
+.TP
+\fB\-v, \-\-verbose\fR
+Show verbose output including APDUs and hex dumps
+.TP
+\fB\-j, \-\-json\fR
+Output in JSON format
+.TP
+\fB\-e, \-\-explore\fR
+Explore all accessible SIM files
+.TP
+\fB\-a, \-\-analysis\fR
+Complete analysis with recommendations
+.TP
+\fB\-r, \-\-reader\fR \fINAME\fR
+Specify reader name
+.TP
+\fB\-p, \-\-pin\fR
+Prompt for PIN (not implemented)
+.TP
+\fB\-h, \-\-help\fR
+Show this help message
+.TP
+\fB\-\-version\fR
+Show version information
+
+.SH EXAMPLES
+.TP
+\fBsimreader\fR
+Basic SIM information
+.TP
+\fBsimreader -a\fR
+Complete analysis with recommendations
+.TP
+\fBsimreader -e -v\fR
+Explore all files with verbose output
+.TP
+\fBsimreader -j\fR
+Output in JSON format
+
+.SH OUTPUT
+The tool can extract:
+.TP
+\- ICCID (SIM serial number)
+.TP
+\- IMSI (subscriber identity)
+.TP
+\- SPN (service provider name)
+.TP
+\- Network information and preferences
+.TP
+\- SMS service parameters
+.TP
+\- Emergency call codes
+.TP
+\- Language preferences
+
+.SH LIMITATIONS
+.TP
+\- Cannot extract contacts stored in phone memory
+.TP
+\- Cannot extract contacts stored in cloud services
+.TP
+\- Cannot extract SMS messages stored in phone memory
+.TP
+\- Cannot extract call history, photos, videos, or apps
+
+.SH REQUIREMENTS
+.TP
+\- PC/SC Lite library (pcsclite)
+.TP
+\- Compatible SIM card reader (ACS ACR38U-CCID supported)
+.TP
+\- Root or appropriate permissions to access smart card devices
+
+.SH AUTHOR
+Written by the simreader development team.
+
+.SH REPORTING BUGS
+Report bugs to: https://github.com/yourusername/simreader/issues
+
+.SH COPYRIGHT
+Copyright © 2025 simreader. License MIT.
+
+.SH SEE ALSO
+pcscd(8)

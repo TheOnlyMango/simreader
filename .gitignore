@@ -1,0 +1,68 @@
+# Build artifacts
+build/
+*.o
+*.exe
+simreader
+simreader-*
+
+# Object files
+*.obj
+*.elf
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Dependency files
+*.d
+
+# Editor files
+*~
+*.swp
+*.swo
+.vscode/
+.idea/
+*.sublime-*
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Package files
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.zip
+*.deb
+*.rpm
+*.pkg.tar.*
+
+# AUR build files
+src/
+pkg/
+*.src.tar.gz
+
+# Temporary files
+*.tmp
+*.temp
+log.*
+output.*
+
+# Core dumps
+core
+core.*
+
+# Test files
+test-output/
+coverage/
+
+# Backup files
+*.bak
+*.backup
