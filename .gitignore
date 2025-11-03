@@ -45,7 +45,6 @@ Thumbs.db
 *.pkg.tar.*
 
 # AUR build files
-src/
 pkg/
 *.src.tar.gz
 
